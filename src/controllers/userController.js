@@ -1,11 +1,10 @@
-// Author: TrungQuanDev | https://youtube.com/@trungquandev
 import { StatusCodes } from 'http-status-codes'
 const Datastore = require('nedb-promises')
 const db = Datastore.create('src/database/db.json')
 
 const hookLogin = async (req, res) => {
   try {
-    // console.log('req.auth: ', req.auth)
+    console.log('req.auth: ', req.auth)
     // req.auth.header // The decoded JWT header.
     // req.auth.payload // The decoded JWT payload.
     // req.auth.token // The raw JWT token.
@@ -13,6 +12,7 @@ const hookLogin = async (req, res) => {
     const newUser = req.body
     // console.log('newUser: ', newUser)
 
+    // nếu đã tồn tại user thì tùy spec dự án để xử lý
     const existingUser = await db.findOne({ email: newUser.email })
     // console.log('existingUser: ', existingUser)
 

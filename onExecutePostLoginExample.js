@@ -1,5 +1,4 @@
 // @ts-nocheck
-// Author: TrungQuanDev | https://youtube.com/@trungquandev
 /**
  * Đây là một ví dụ về cách sử dụng onExecutePostLogin Flow của Auth0 để gọi sang api backend của chúng ta
  */

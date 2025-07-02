@@ -2,7 +2,7 @@
   "name": "nodejs-expressjs-mongodb-base-project",
   "private": true,
   "version": "1.0.0",
-  "author": "TrungQuanDev | https://youtube.com/@trungquandev",
+  "author": "ideft",
   "engines": {
     "node": "20.x"
   },
