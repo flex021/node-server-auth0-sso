@@ -17,7 +17,6 @@ exports.onExecutePostLogin = async (event, api) => {
     return response.data.access_token
   }
   const accessToken = await getAccessToken()
-  console.log('accessToken: ', accessToken)
 
   try {
     await axios.post(`${RENDER_API_ENDPOINT}/api-v1/users/private/hook/login`, event.user, {
@@ -27,7 +26,6 @@ exports.onExecutePostLogin = async (event, api) => {
       }
     })
   } catch (error) {
-    console.error('Error saving user to Back-end:', error)
     let errorMessage = error.message // Request failed with status code ...
     if (error.response?.data?.message) {
       errorMessage = error.response?.data?.message // Message từ API
